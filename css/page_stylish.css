@@ -1,0 +1,124 @@
+/* CSS Document */
+
+#job h2 {
+	color: #f9f9f9;
+	background-color: rgba(84,125,189,1.00);
+	padding: 1em;
+}
+
+#net h2 {
+	color: #222;
+	background-color: #eee;
+	padding: 1em;
+}
+
+#rad h2 {
+	color: #222;
+	background-color: #eee;
+	padding: 1em;
+}
+
+#for h2 {
+	color: #222;
+	background-color: #eee;
+	padding: 1em;
+}
+
+ul.breadcrumb li a {
+  	color: #547DBD;
+  	text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  	color: #01447e;
+  	text-decoration: underline;
+}
+
+main section {
+	display: grid;
+	grid-template-columns: 30% 70%;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+.tab {
+  	float: left;
+  	border: 1px solid #ccc;
+  	background-color: #f1f1f1;
+  	height: auto;
+	grid-column: 1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  	display: block;
+  	background-color: inherit;
+  	color: black;
+  	padding: 22px 16px;
+  	width: 100%;
+  	border: none;
+  	outline: none;
+  	text-align: left;
+  	cursor: pointer;
+  	font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  	background-color: #547DBD;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  	background-color: #547DBD;
+	color: #f9f9f9;
+}
+
+/* Style the tab content */
+.tabcontent {
+  	float: left;
+  	border: 1px solid #ccc;
+  	width: auto;
+  	border-left: none;
+  	padding: 1em;
+  	display: none;
+	grid-column: 2;
+}
+
+h4 {
+	margin-top: 5em;
+}
+
+
+.tabcontent h3::before {
+	content: "";
+	background-image: url(../img/arrow2.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.tabcontent h4::before {
+	content: "";
+	background-image: url(../img/arrow3.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	width: 48px;
+	height: 24px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+
+
+/* Clear floats after the tab */
+.clearfix::after {
+  	content: "";
+  	clear: both;
+  	display: table;
+}

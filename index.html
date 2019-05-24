@@ -1,10 +1,126 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
+	<meta charset="utf-8">
+	<title>CfA Forside</title>
+	
+	<!--	STYLESHEETS	-->
+	<link rel="stylesheet" href="css/stylish.css">
+	<link rel="stylesheet" href="css/home_style.css">
 </head>
 
 <body>
+	<header>
+		<a href="index.html"><img src="img/logo.png" alt="logo"></a>
+		<ul>
+			<a href="#">Nyhedsbrev</a>
+			<a href="#">Om os</a>
+			<a href="#">Kontakt</a>
+		</ul>
+		<input type="text" placeholder="Søg">
+	</header>
+	
+	<main>
+		<section class="menu_grid">
+			
+			<article id="job">
+				<h2>Job &amp; Uddannelse</h2>
+				<a href="uddannelse.html"><img src="img/uddannelse.jpg" alt="job"></a>
+			</article>
+			
+			<article id="net">
+				<h2>Netværksafdelingen</h2>
+				<a href="#"><img src="img/netverk.jpg" alt="netværk"></a>
+			</article>
+			
+			<article id="rad">
+				<h2>Rådgivning, behandling &amp; Kurser</h2>
+				<a href="#"><img src="img/kursus.jpg" alt="kursus"></a>
+			</article>
+			
+			<article id="for">
+				<h2>Forskning &amp; Udvikling</h2>
+				<a href="#"><img src="img/forskning.jpg" alt="forskning"></a>
+			</article>
+			
+		</section>
+		
+		<section class="slideshow-container menu_grid">
+			<article class="mySlides">
+				  <p class="numbertext">1 / 3</p>
+				  <img src="img/slide1.jpg" alt="pic" style="width:100%">
+				  <p class="text">Caption Text</p>
+			</article>
+
+			<article class="mySlides">
+				  <p class="numbertext">2 / 3</p>
+				  <img src="img/slide2.jpg" alt="pic" style="width:100%">
+				  <p class="text">Caption Two</p>
+			</article>
+
+			<article class="mySlides">
+				  <p class="numbertext">3 / 3</p>
+				  <img src="img/slide3.jpg" alt="pic" style="width:100%">
+				  <p class="text">Caption Three</p>
+			</article>
+				
+			<div id="progress" style="text-align:center">
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+			</div>
+
+		</section>
+	</main>
+	
+	<footer>
+		<article id="kontakt">
+			<ul id="cfa">
+				<p>Center for Autisme</p>
+				<p>Herlev Hovedgade 199</p>
+				<p>2730 Herlev</p>
+			</ul>
+			<ul>
+				<p>Tlf: +45 44 98 23 55</p>
+				<p>Fax: +45 44 98 23 53</p>
+			</ul>
+			<ul>
+				<p>Cvr-nr. 17 19 55 49</p>
+			</ul>
+		</article>
+		<article id="genvej">
+			<ul>
+				<li><p>Genveje:</p></li>
+				<li><a href="#">Find vej</a></li>
+				<li><a href="#">Oms os</a></li>
+				<li><a href="#">Nyhedsbrev</a></li>
+				<li><a href="#">Boghandle</a></li>
+				<li><a href="#">Kontakt</a></li>
+			</ul>
+		</article>
+		
+	</footer>
+	<script>
+	var slideIndex = 0;
+	showSlides();
+
+	function showSlides() {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("dot");
+	  for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+	  }
+	  slideIndex++;
+	  if (slideIndex > slides.length) {slideIndex = 1}    
+	  for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	  setTimeout(showSlides, 9000); // Change image every 2 seconds
+	}
+	</script>
 </body>
+	
 </html>
